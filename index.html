@@ -236,10 +236,13 @@
   // ── СЧЁТЧИК ──
   let count = 1;
   document.getElementById('plus').addEventListener('click', () => {
+  if (count < 10) {
     count++;
     document.getElementById('counter-display').textContent = count;
     document.getElementById('guests-count-hidden').value = count;
-  });
+  }
+});
+
   document.getElementById('minus').addEventListener('click', () => {
     if (count > 1) {
       count--;
